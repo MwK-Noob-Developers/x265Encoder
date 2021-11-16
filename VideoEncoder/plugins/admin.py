@@ -4,7 +4,7 @@ from . import *
 import asyncio
 
 
-@BotzHub.on(events.NewMessage(from_users=960178059, pattern="^/broadcast"))
+@BotzHub.on(events.NewMessage(from_users=749673781, pattern="^/broadcast"))
 async def _broadcast(event):
     await BotzHub.send_message(
         event.chat_id, "Send the message you want to broadcast!\nSend /cancel to stop."
@@ -44,7 +44,7 @@ Total users in bot: `{}`.\n
     await lmao.edit(done_mssg)
 
 
-@BotzHub.on(events.NewMessage(from_users=960178059, pattern="^/stats"))
+@BotzHub.on(events.NewMessage(from_users=749673781, pattern="^/stats"))
 async def statt(event):
     users = len(await all_users())
     await event.reply(f"Stats:\nUsers: {users}")
