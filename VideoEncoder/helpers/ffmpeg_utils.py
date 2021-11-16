@@ -44,7 +44,7 @@ def encode(filepath):
     elif audio_codec[0] == 'aac':
         audio_opts = '-c:a copy'
     else:
-        audio_opts = '-c:a aac -b:a 128k'
+        audio_opts = '-c:a aac -b:a 320k -c copy -metadata "title=𝕊𝕞𝕃 (@shamilnelli)" -metadata:s:v "title=𝕊𝕞𝕃 [MwKOTT]" -metadata:s:v "title=𝕊𝕞𝕃 //DVDWO//MwKOTT" -metadata:s:a "comment=Copyrights Are By @shamiLneLLi on telegram and instagram for https://t.me/mwkott , haters stepback" -metadata:s:a "writing library=https://mwkott" -metadata:s:a "comment=Copyrights Are By @shamiLneLLi on telegram and instagram for https://t.me/mwkott , haters stepback" -metadata:s:a "writing library=https://mwkott" -metadata:s:a "comment=Copyrights Are By @shamiLneLLi on telegram and instagram for https://t.me/mwkott , haters stepback" -metadata:s:a "writing library=https://mwkott" -metadata:s:a "writing application=Shamil Habeeb #DVDWOALL'
     call(['ffmpeg', '-i', filepath] + video_opts.split() + audio_opts.split() + [output_filepath])
     os.remove(filepath)
     return output_filepath
